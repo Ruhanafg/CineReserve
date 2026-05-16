@@ -1,0 +1,49 @@
+<div class="container mt-5 text-center">
+
+  <div class="card shadow p-5">
+
+    <h1 class="text-success">
+      🎉 Booking Successful!
+    </h1>
+
+    <p class="mt-3">
+      Your ticket has been confirmed.
+    </p>
+
+    <hr>
+
+    <h4>
+      🎫 Booking Reference:
+    </h4>
+
+    <h3 class="text-primary">
+      {{ bookingReference }}
+    </h3>
+
+    <h5 class="mt-3">
+      💰 Total Paid: ₹{{ totalAmount }}
+    </h5>
+
+    <div class="mt-4">
+
+      <button
+        class="btn btn-primary me-2"
+        (click)="viewBookings()">
+
+        View My Bookings
+
+      </button>
+
+      <button
+        class="btn btn-secondary"
+        (click)="goHome()">
+
+        Go Home
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

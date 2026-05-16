@@ -1,0 +1,46 @@
+
+/* screen */
+.screen {
+  background: #1e90ff;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* seat grid */
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* seat */
+.seat {
+  background: #2c3e50;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+/* hover */
+.seat:hover {
+  background: #1e90ff;
+  transform: scale(1.1);
+}
+
+/* selected seat */
+.selected {
+  background: #00c853 !important;
+}
+
+/* VIP seats */
+.vip {
+  border: 2px solid gold;
+}

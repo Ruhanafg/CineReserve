@@ -1,0 +1,44 @@
+<div class="container mt-4">
+
+  <h2>
+    Select Showtime
+  </h2>
+
+  <h5 class="text-muted mb-3">
+    {{ movie?.title }}
+  </h5>
+
+  <div class="row">
+
+    <div
+      class="col-md-4 mb-3"
+      *ngFor="let s of showtimes">
+
+      <div class="card p-3 shadow">
+
+        <h5>
+          {{ s.showTime }}
+        </h5>
+
+        <p>
+          Date:
+          {{ s.showDate | date }}
+        </p>
+
+        <p>
+          Price: ₹{{ s.price }}
+        </p>
+
+        <button
+          class="btn btn-primary"
+          (click)="selectShowtime(s)">
+          Select
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

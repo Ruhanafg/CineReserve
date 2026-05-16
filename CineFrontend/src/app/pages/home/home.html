@@ -1,0 +1,42 @@
+
+<div class="container mt-4">
+
+  <!-- Header -->
+  <div class="text-center mb-4">
+    <h2 class="title">🎬 Now Showing</h2>
+    <p class="subtitle">Book your favorite movies instantly</p>
+  </div>
+
+  <!-- Movies Grid -->
+  <div class="row">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+         *ngFor="let movie of movies">
+
+      <div class="card movie-card shadow-sm h-100">
+
+        <!-- Poster -->
+        <img
+          [src]="movie.poster || 'assets/default.jpg'"
+          class="movie-poster"
+          alt="movie poster"
+        />
+
+        <!-- Details -->
+        <div class="card-body text-center">
+
+          <h5 class="movie-title">{{ movie.title }}</h5>
+
+          <p class="movie-info">🎭 {{ movie.language }}</p>
+
+          <p class="movie-info">⏱ {{ movie.duration }}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

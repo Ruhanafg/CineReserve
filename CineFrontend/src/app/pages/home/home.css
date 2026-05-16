@@ -1,0 +1,48 @@
+
+/* Page background */
+.container {
+  color: white;
+}
+
+/* Title */
+.title {
+  color: #317ecc;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #cfd8ff;
+}
+
+/* Movie card */
+.movie-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(30, 144, 255, 0.5);
+}
+
+/* Poster */
+.movie-poster {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* Text */
+.movie-title {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.movie-info {
+  color: #cfd8ff;
+  margin: 0;
+}

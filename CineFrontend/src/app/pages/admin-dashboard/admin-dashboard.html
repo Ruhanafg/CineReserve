@@ -1,0 +1,52 @@
+
+<div class="container mt-4">
+
+  <h2>Admin Dashboard</h2>
+
+  <!-- ADD MOVIE -->
+  <div class="card p-3 mb-3">
+
+    <h5>Add Movie</h5>
+
+    <input class="form-control mb-2"
+           placeholder="Title"
+           [(ngModel)]="movie.title">
+
+    <input class="form-control mb-2"
+           placeholder="Duration"
+           [(ngModel)]="movie.duration">
+
+    <input class="form-control mb-2"
+           placeholder="Language"
+           [(ngModel)]="movie.language">
+
+    <button class="btn btn-primary"
+            (click)="addMovie()">
+      Add Movie
+    </button>
+
+  </div>
+
+  <!-- MOVIE LIST -->
+  <div class="card p-3">
+
+    <h5>Movies</h5>
+
+    <div *ngFor="let m of movies" class="border p-2 mb-2">
+
+      <b>{{ m.title }}</b>
+
+      <input class="form-control mt-2"
+             placeholder="Showtime"
+             [(ngModel)]="showtime.startTime">
+
+      <button class="btn btn-success mt-2"
+              (click)="addShowtime(m.id)">
+        Add Showtime
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

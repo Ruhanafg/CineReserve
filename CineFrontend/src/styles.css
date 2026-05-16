@@ -1,0 +1,20 @@
+body {
+  background: linear-gradient(135deg, #0a1a3a, #0d2b5c);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.card {
+  background: #132a52;
+  border-radius: 12px;
+  color: white;
+  border: none;
+}
+
+.btn-primary {
+  background: #1e5eff;
+}
+
+.btn-warning {
+  color: black;
+}

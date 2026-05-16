@@ -1,0 +1,39 @@
+<div class="container mt-4">
+
+  <h2 class="text-center mb-4">🎟 Select Your Seats</h2>
+
+  <div class="screen">SCREEN</div>
+
+  <div class="seat-grid">
+
+    <div *ngFor="let row of rows" class="seat-row">
+
+      <div class="row-label">{{ row }}</div>
+
+      <div
+        *ngFor="let col of cols"
+        class="seat"
+        [ngClass]="{
+          booked: isBooked(row, col),
+          selected: isSelected(row, col)
+        }"
+        (click)="toggleSeat(row, col)"
+      >
+        {{ col }}
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="legend mt-3">
+    <span class="box available"></span> Available
+    <span class="box selected-box"></span> Selected
+    <span class="box booked-box"></span> Booked
+  </div>
+
+  <button class="btn btn-success mt-4 w-100" (click)="confirmBooking()">
+    Confirm Booking
+  </button>
+
+</div>

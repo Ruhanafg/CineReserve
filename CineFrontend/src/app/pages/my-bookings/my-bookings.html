@@ -1,0 +1,51 @@
+<div class="container mt-4">
+
+  <h2 class="mb-4">
+    🎟 My Bookings
+  </h2>
+
+  <div *ngIf="loading">
+    Loading...
+  </div>
+
+  <div *ngIf="!loading && bookings.length === 0">
+    No bookings found.
+  </div>
+
+  <div *ngFor="let b of bookings" class="ticket-card">
+
+    <div class="ticket-header">
+
+      <h4>
+        🎬 {{ b.bookingReference }}
+      </h4>
+
+      <span class="price">
+        ₹{{ b.totalAmount }}
+      </span>
+
+    </div>
+
+    <div class="ticket-body">
+
+      <p>
+        📅 {{ b.bookingDate | date:'medium' }}
+      </p>
+
+      <p>
+        💺 Seats:
+
+        <span class="seat"
+              *ngFor="let t of b.ticketDetails">
+
+          {{ t.rowNumber }}{{ t.seatNumber }}
+
+        </span>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
